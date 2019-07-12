@@ -1,0 +1,57 @@
+<mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Todos">
+
+        <div fxLayout="column" style="padding: 15px;" *ngFor="let l of listagem">
+
+            <mat-card class="example-card" style=" background: #f9f9f9">
+
+                <mat-card-header>
+                    <mat-card-title>{{l.title}}</mat-card-title>
+                    <mat-card-subtitle>Id: {{l.id}}</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+
+        </div>
+
+
+
+    </mat-tab>
+    <mat-tab label="Posts">
+
+        <div fxLayout="column" style="padding: 15px;" *ngFor="let p of postagem">
+
+            <mat-card class="example-card" style="margin-top:15px; background: #f9f9f9">
+                <mat-card-header>
+                    <mat-card-title>{{p.title}}</mat-card-title>
+                </mat-card-header>
+
+                <mat-card-content>
+                    <p>
+                        {{p.body}}
+                    </p>
+                </mat-card-content>
+            </mat-card>
+
+        </div>
+
+
+    </mat-tab>
+
+    <mat-tab label="Albums">
+
+
+        <div fxLayout="column" style="padding: 15px;" *ngFor="let a of albums">
+
+            <mat-card class="example-card" style="margin-top:15px; background: #f9f9f9">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>{{a.title}}</mat-card-title>
+                    <mat-card-subtitle>Id: {{a.id}}</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+
+
+
+        </div>
+    </mat-tab>
+</mat-tab-group>
